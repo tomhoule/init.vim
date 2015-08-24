@@ -1,3 +1,24 @@
+" --- Directories ---
+set runtimepath=~/.nvim/,$VIMRUNTIME
+set backupdir=~/.nvim/backup/
+set directory=~/.nvim/swap/
+set undodir=~/.nvim/undo/
+
+" --- Vundle ---
+set runtimepath+=~/.nvim/bundle/Vundle.vim
+filetype off
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
+Plugin 'majutsushi/tagbar'
+
+call vundle#end()
+
+" --- Configuration ---
 set number
 syntax enable
 filetype plugin indent on
@@ -11,11 +32,10 @@ set wrap                 " Enable soft-wrapping
 set linebreak            " Do not cut words in half when soft-wrapping
 set showbreak="*"
 
+" --- Keybindings ---
 let mapleader="»"
 let maplocalleader="«"
-let runtimepath="$HOME/.nvim/,$VIMRUNTIME"
-let backupdir="$HOME/.nvim/backup/"
-let swap="$HOME/.nvim/swap/"
-let undodir="$HOME/.nvim/undo/"
 
 nnoremap <Leader>d :NERDTree<CR>
+nmap <F8> :TagbarToggle<CR>
+
