@@ -15,6 +15,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'tpope/vim-surround'
 
 call vundle#end()
 
