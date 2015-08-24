@@ -31,6 +31,9 @@ set formatoptions=cqj    " Hard wrap only for comments
 set wrap                 " Enable soft-wrapping
 set linebreak            " Do not cut words in half when soft-wrapping
 set showbreak="*"
+set tabstop=8
+set shiftwidth=4
+set expandtab
 
 " --- Keybindings ---
 let mapleader="»"
