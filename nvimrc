@@ -4,6 +4,7 @@ set backupdir=~/.nvim/backup/
 set directory=~/.nvim/swap/
 set undodir=~/.nvim/undo/
 
+
 " --- Vundle ---
 set runtimepath+=~/.nvim/bundle/Vundle.vim
 filetype off
@@ -18,7 +19,11 @@ Plugin 'majutsushi/tagbar'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
 
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+
 call vundle#end()
+
 
 " --- Configuration ---
 set number
@@ -38,6 +43,7 @@ set tabstop=8
 set shiftwidth=4
 set expandtab
 
+
 " --- Keybindings ---
 let mapleader="»"
 let maplocalleader="«"
@@ -47,3 +53,8 @@ nnoremap <Leader>t :terminal<CR>
 tnoremap <Esc> <C-\><C-n>
 nmap <F8> :TagbarToggle<CR>
 
+
+" --- Language-specific options ---
+
+" JS
+let g:jsx_ext_required = 0 " allow jsx in .js files
