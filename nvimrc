@@ -50,7 +50,7 @@ let maplocalleader="«"
 
 nnoremap <Leader>d :NERDTree<CR>
 nnoremap <Leader>t :terminal<CR>
-tnoremap <Esc> <C-\><C-n>
+tnoremap ÈÈ <C-\><C-n>
 nmap <F8> :TagbarToggle<CR>
 
 
