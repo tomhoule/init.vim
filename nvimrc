@@ -42,6 +42,7 @@ set showbreak="*"
 set tabstop=8
 set shiftwidth=4
 set expandtab
+set ignorecase smartcase
 
 
 " --- Keybindings ---
