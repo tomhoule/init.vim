@@ -18,6 +18,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
+Plugin 'jamessan/vim-gnupg'
 
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
