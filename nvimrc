@@ -44,7 +44,7 @@ set tabstop=8
 set shiftwidth=4
 set expandtab
 set ignorecase smartcase
-
+set wildignore=*/tmp/*,*.so,*.swp,*.zip
 
 " --- Keybindings ---
 let mapleader="»"
