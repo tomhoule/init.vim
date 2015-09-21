@@ -53,6 +53,8 @@ let maplocalleader="«"
 
 nnoremap <Leader>d :NERDTree<CR>
 nnoremap <Leader>t :terminal<CR>
+" aww yiss! ↴
+nnoremap <Leader>w :w<CR>
 tnoremap ÈÈ <C-\><C-n>
 nmap <F8> :TagbarToggle<CR>
 
