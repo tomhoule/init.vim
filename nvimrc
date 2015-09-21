@@ -22,6 +22,8 @@ Plugin 'jamessan/vim-gnupg'
 
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'Quramy/tsuquyomi' " typescript
 
 call vundle#end()
 
@@ -59,3 +61,6 @@ nmap <F8> :TagbarToggle<CR>
 
 " JS
 let g:jsx_ext_required = 0 " allow jsx in .js files
+
+" Typescript
+autocmd FileType typescript nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
