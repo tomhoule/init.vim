@@ -60,11 +60,10 @@ nnoremap <Leader>w :w<CR>
 tnoremap ÈÈ <C-\><C-n>
 nmap <F8> :TagbarToggle<CR>
 
-
 " --- Language-specific options ---
 
 " Typescript
-autocmd FileType typescript nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
+autocmd FileType typescript nmap <buffer> <LocalLeader>t : <C-u>echo tsuquyomi#hint()<CR>
 " .tsxもtypescriptとして扱う
 autocmd BufNewFile,BufRead *.{ts,tsx} set filetype=typescript
 let g:syntastic_quiet_messages = { "file:p": [".tsx$", ".ts$"] }
