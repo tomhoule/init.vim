@@ -27,6 +27,9 @@ Plugin 'Quramy/tsuquyomi'
 Plugin 'jason0x43/vim-js-indent'
 Plugin 'leafgarland/typescript-vim'
 
+Plugin 'ebfe/vim-racer'
+Plugin 'wting/rust.vim'
+
 call vundle#end()
 
 
