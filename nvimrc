@@ -51,6 +51,7 @@ set tabstop=8
 set shiftwidth=4
 set expandtab
 set ignorecase smartcase
+set smarttab
 
 " --- Keybindings ---
 let mapleader="»"
@@ -62,6 +63,7 @@ nnoremap <Leader>t :terminal<CR>
 nnoremap <Leader>w :w<CR>
 tnoremap ÈÈ <C-\><C-n>
 nmap <F8> :TagbarToggle<CR>
+nnoremap é :
 
 " --- Language-specific options ---
 
