@@ -61,6 +61,7 @@ nnoremap <Leader>d :NERDTree<CR>
 nnoremap <Leader>t :terminal<CR>
 " aww yiss! ↴
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>h :nohlsearch<CR>
 tnoremap ÈÈ <C-\><C-n>
 nmap <F8> :TagbarToggle<CR>
 nnoremap é :
