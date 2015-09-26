@@ -9,24 +9,25 @@ set runtimepath+=~/.nvim/bundle/Vundle.vim
 filetype off
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-characterize'
-Plugin 'scrooloose/syntastic'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'jamessan/vim-gnupg'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'tpope/vim-surround'
-Plugin 'jamessan/vim-gnupg'
 Plugin 'rking/ag.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-characterize'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-vinegar'
+Plugin 'VundleVim/Vundle.vim'
 
+" Language-specific plugins
 Plugin 'pangloss/vim-javascript'
 
-Plugin 'Shougo/vimproc'
-Plugin 'Quramy/tsuquyomi'
 Plugin 'jason0x43/vim-js-indent'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'Quramy/tsuquyomi'
+Plugin 'Shougo/vimproc'
 
 Plugin 'ebfe/vim-racer'
 Plugin 'wting/rust.vim'
