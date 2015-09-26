@@ -50,6 +50,7 @@ set wrap                 " Enable soft-wrapping
 set linebreak            " Do not cut words in half when soft-wrapping
 set showbreak="*"
 set tabstop=8
+set softtabstop=8
 set shiftwidth=4
 set expandtab
 set ignorecase smartcase
@@ -59,13 +60,17 @@ set smarttab
 let mapleader="»"
 let maplocalleader="«"
 
-nnoremap <Leader>d :NERDTree<CR>
-nnoremap <Leader>t :terminal<CR>
 " aww yiss! ↴
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>tt :terminal<CR>
+nnoremap <Leader>to :tabnew<CR>
+nnoremap <Leader>tc :tabclose<CR>
 tnoremap ÈÈ <C-\><C-n>
 nmap <F8> :TagbarToggle<CR>
 nnoremap é :
+
+:digraph \v 8628 " ↴
+:digraph \> 8627 " ↳
 
 " --- Language-specific options ---
 
