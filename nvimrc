@@ -65,6 +65,7 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>tt :terminal<CR>
 nnoremap <Leader>to :tabnew<CR>
 nnoremap <Leader>tc :tabclose<CR>
+nnoremap <Leader>h :nohlsearch<CR>
 tnoremap ÈÈ <C-\><C-n>
 nmap <F8> :TagbarToggle<CR>
 nnoremap é :
