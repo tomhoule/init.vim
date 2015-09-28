@@ -9,23 +9,25 @@ set runtimepath+=~/.nvim/bundle/Vundle.vim
 filetype off
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'jamessan/vim-gnupg'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'tpope/vim-surround'
-Plugin 'jamessan/vim-gnupg'
 Plugin 'rking/ag.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-characterize'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-vinegar'
+Plugin 'VundleVim/Vundle.vim'
 
+" Language-specific plugins
 Plugin 'pangloss/vim-javascript'
 
-Plugin 'Shougo/vimproc'
-Plugin 'Quramy/tsuquyomi'
 Plugin 'jason0x43/vim-js-indent'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'Quramy/tsuquyomi'
+Plugin 'Shougo/vimproc'
 
 Plugin 'ebfe/vim-racer'
 Plugin 'wting/rust.vim'
@@ -48,6 +50,7 @@ set wrap                 " Enable soft-wrapping
 set linebreak            " Do not cut words in half when soft-wrapping
 set showbreak="*"
 set tabstop=8
+set softtabstop=8
 set shiftwidth=4
 set expandtab
 set ignorecase smartcase
@@ -57,14 +60,18 @@ set smarttab
 let mapleader="»"
 let maplocalleader="«"
 
-nnoremap <Leader>d :NERDTree<CR>
-nnoremap <Leader>t :terminal<CR>
 " aww yiss! ↴
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>tt :terminal<CR>
+nnoremap <Leader>to :tabnew<CR>
+nnoremap <Leader>tc :tabclose<CR>
 nnoremap <Leader>h :nohlsearch<CR>
 tnoremap ÈÈ <C-\><C-n>
 nmap <F8> :TagbarToggle<CR>
 nnoremap é :
+
+:digraph \v 8628 " ↴
+:digraph \> 8627 " ↳
 
 " --- Language-specific options ---
 
