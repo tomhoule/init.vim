@@ -75,6 +75,7 @@ nnoremap <Leader>h :nohlsearch<CR>
 tnoremap ÈÈ <C-\><C-n>
 nmap <F8> :TagbarToggle<CR>
 nnoremap é :
+noremap ts <ESC>
 
 :digraph \v 8628 " ↴
 :digraph \> 8627 " ↳
