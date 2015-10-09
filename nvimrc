@@ -79,7 +79,9 @@ nmap <F8> :TagbarToggle<CR>
 nnoremap é :
 
 :digraph \v 8628 " ↴
-:digraph \> 8627 " ↳
+:digraph L> 8627 " ↳
+:digraph /^ 8599 " ↗
+:digraph \> 8600 " ↘
 
 " }}}1
 " Language-specific options {{{1
