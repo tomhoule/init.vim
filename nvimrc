@@ -10,12 +10,13 @@ set runtimepath+=~/.nvim/bundle/Vundle.vim
 filetype off
 call vundle#begin()
 
+Plugin 'benekastah/neomake'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'kien/ctrlp.vim'
 Plugin 'jamessan/vim-gnupg'
-Plugin 'ctrlp/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'rking/ag.vim'
-Plugin 'scrooloose/syntastic'
+Plugin 'Shougo/deoplete.nvim'
 Plugin 'tpope/vim-characterize'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
@@ -60,6 +61,8 @@ set foldmethod=marker
 
 " . applies to each line of visual selection
 vnoremap . :norm.<CR>
+
+let g:deoplete#enable_at_startup = 1
 
 " }}}1
 " Keybindings {{{1
