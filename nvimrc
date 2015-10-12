@@ -10,6 +10,7 @@ set runtimepath+=~/.nvim/bundle/Vundle.vim
 filetype off
 call vundle#begin()
 
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'benekastah/neomake'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
@@ -63,6 +64,9 @@ set foldmethod=marker
 vnoremap . :norm.<CR>
 
 let g:deoplete#enable_at_startup = 1
+
+set background=dark
+colorscheme solarized
 
 " }}}1
 " Keybindings {{{1
