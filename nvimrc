@@ -24,11 +24,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Language-specific plugins
 Plugin 'pangloss/vim-javascript'
-
 Plugin 'jason0x43/vim-js-indent'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'Quramy/tsuquyomi'
-Plugin 'Shougo/vimproc'
 
 Plugin 'ebfe/vim-racer'
 Plugin 'wting/rust.vim'
