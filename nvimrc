@@ -10,12 +10,14 @@ set runtimepath+=~/.nvim/bundle/Vundle.vim
 filetype off
 call vundle#begin()
 
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'benekastah/neomake'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'kien/ctrlp.vim'
 Plugin 'jamessan/vim-gnupg'
-Plugin 'ctrlp/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'rking/ag.vim'
-Plugin 'scrooloose/syntastic'
+Plugin 'Shougo/deoplete.nvim'
 Plugin 'tpope/vim-characterize'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
@@ -58,6 +60,11 @@ set foldmethod=marker
 " . applies to each line of visual selection
 vnoremap . :norm.<CR>
 
+let g:deoplete#enable_at_startup = 1
+
+set background=dark
+colorscheme solarized
+
 " }}}1
 " Keybindings {{{1
 let mapleader="»"
@@ -73,7 +80,9 @@ nmap <F8> :TagbarToggle<CR>
 nnoremap é :
 
 :digraph \v 8628 " ↴
-:digraph \> 8627 " ↳
+:digraph L> 8627 " ↳
+:digraph /^ 8599 " ↗
+:digraph \> 8600 " ↘
 
 " }}}1
 " Language-specific options {{{1
