@@ -78,6 +78,7 @@ nnoremap <Leader>tc :tabclose<CR>
 nnoremap <Leader>h :nohlsearch<CR>
 nmap <F8> :TagbarToggle<CR>
 nnoremap é :
+noremap! <C-s> <ESC>
 
 :digraph \v 8628 " ↴
 :digraph L> 8627 " ↳
