@@ -17,11 +17,12 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'jamessan/vim-gnupg'
 Plugin 'majutsushi/tagbar'
 Plugin 'rking/ag.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'tpope/vim-characterize'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-vinegar'
 Plugin 'VundleVim/Vundle.vim'
 
 " Language-specific plugins
@@ -76,6 +77,7 @@ nnoremap <Leader>tt :terminal<CR>
 nnoremap <Leader>to :tabnew<CR>
 nnoremap <Leader>tc :tabclose<CR>
 nnoremap <Leader>h :nohlsearch<CR>
+nnoremap <Leader>d :NERDTree<CR>
 nmap <F8> :TagbarToggle<CR>
 nnoremap é :
 noremap! <C-s> <ESC>
