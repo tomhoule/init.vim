@@ -20,6 +20,7 @@ Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Shougo/deoplete.nvim'
+Plugin 'stephpy/vim-yaml'
 Plugin 'tpope/vim-characterize'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
@@ -49,7 +50,7 @@ set textwidth=72
 set formatoptions=cqj    " Hard wrap only for comments
 set wrap                 " Enable soft-wrapping
 set linebreak            " Do not cut words in half when soft-wrapping
-set showbreak="*"
+set showbreak="> "
 set tabstop=8
 set softtabstop=8
 set shiftwidth=4
@@ -80,7 +81,7 @@ nnoremap <Leader>h :nohlsearch<CR>
 nnoremap <Leader>d :NERDTree<CR>
 nmap <F8> :TagbarToggle<CR>
 nnoremap é :
-noremap! <C-s> <ESC>
+noremap! <C-a> <ESC>
 
 :digraph \v 8628 " ↴
 :digraph L> 8627 " ↳
