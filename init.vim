@@ -1,8 +1,8 @@
 " Directories {{{1
-set runtimepath=~/.nvim/,$VIMRUNTIME
-set backupdir=~/.nvim/backup/
-set directory=~/.nvim/swap/
-set undodir=~/.nvim/undo/
+set runtimepath=~/.config/nvim/bundle/Vundle.vim
+set backupdir=~/.config/nvim/backup/
+set directory=~/.config/nvim/swap/
+set undodir=~/.config/nvim/undo/
 
 " }}}1
 " Vundle {{{1
