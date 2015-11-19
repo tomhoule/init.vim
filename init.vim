@@ -79,7 +79,7 @@ nnoremap <Leader>d :NERDTree<CR>
 nnoremap <Leader>ag :Ag<Space>
 nnoremap <Leader>gr :AgBuffer<Space>
 nmap <F8> :TagbarToggle<CR>
-nnoremap é :
+noremap é :
 noremap! <C-a> <ESC>
 
 :digraph \v 8628 " ↴
