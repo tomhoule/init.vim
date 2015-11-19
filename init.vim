@@ -11,7 +11,6 @@ filetype off
 call vundle#begin()
 
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'benekastah/neomake'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 Plugin 'jamessan/vim-gnupg'
@@ -19,7 +18,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'Shougo/deoplete.nvim'
+Plugin 'scrooloose/syntastic'
 Plugin 'stephpy/vim-yaml'
 Plugin 'tpope/vim-characterize'
 Plugin 'tpope/vim-fugitive'
@@ -62,8 +61,6 @@ set foldmethod=marker
 " . applies to each line of visual selection
 vnoremap . :norm.<CR>
 
-let g:deoplete#enable_at_startup = 1
-
 set background=dark
 colorscheme solarized
 
@@ -91,10 +88,8 @@ noremap! <C-a> <ESC>
 " }}}1
 " Language-specific options {{{1
 
-" Typescript
-autocmd FileType typescript nmap <buffer> <LocalLeader>t : <C-u>echo tsuquyomi#hint()<CR>
 " .tsxもtypescriptとして扱う
 autocmd BufNewFile,BufRead *.{ts,tsx} set filetype=typescript
-let g:syntastic_quiet_messages = { "file:p": [".tsx$", ".ts$"] }
+" let g:syntastic_quiet_messages = { "file:p": [".tsx$", ".ts$"] }
 
 " }}}1
