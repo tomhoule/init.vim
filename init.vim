@@ -76,6 +76,8 @@ nnoremap <Leader>to :tabnew<CR>
 nnoremap <Leader>tc :tabclose<CR>
 nnoremap <Leader>h :nohlsearch<CR>
 nnoremap <Leader>d :NERDTree<CR>
+nnoremap <Leader>ag :Ag<Space>
+nnoremap <Leader>gr :AgBuffer<Space>
 nmap <F8> :TagbarToggle<CR>
 nnoremap é :
 noremap! <C-a> <ESC>
