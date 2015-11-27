@@ -1,4 +1,4 @@
-" VimPlug
+" # Plugins #
 call plug#begin()
 
 Plug 'altercation/vim-colors-solarized'
@@ -7,27 +7,26 @@ Plug 'kien/ctrlp.vim'
 Plug 'jamessan/vim-gnupg'
 Plug 'majutsushi/tagbar'
 Plug 'rking/ag.vim'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/syntastic'
+Plug 'benekastah/neomake'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'VundleVim/Vundle.vim'
 
-" Language-specific plugins
+" ## Language-specific plugins ##
 Plug 'pangloss/vim-javascript'
-Plug 'jason0x43/vim-js-indent'
 Plug 'leafgarland/typescript-vim'
 
-Plug 'ebfe/vim-racer'
+Plug 'ebfe/vim-racer', { 'for': 'rust' }
 Plug 'wting/rust.vim'
 
 Plug 'stephpy/vim-yaml'
 
 call plug#end()
 
-" Configuration
+" # Configuration #
 set number
 syntax enable
 filetype plugin indent on
@@ -53,7 +52,7 @@ vnoremap . :norm.<CR>
 set background=dark
 colorscheme solarized
 
-" Keybindings
+" # Keybindings #
 let mapleader="»"
 let maplocalleader="«"
 
@@ -78,8 +77,13 @@ noremap! <C-l> <ESC>
 :digraph /^ 8599 " ↗
 :digraph \> 8600 " ↘
 
-" Language-specific options
+" # Language-specific options #
 
 " .tsxもtypescriptとして扱
 autocmd BufNewFile,BufRead *.{ts,tsx} set filetype=typescript
 " let g:syntastic_quiet_messages = { "file:p": [".tsx$", ".ts$"] }
+
+" ## Rust ##
+autocmd BufNewFile,BufRead *.rs set makeprg=cargo\ build
+autocmd BufWritePost *.rs Neomake!
+" errorformat…

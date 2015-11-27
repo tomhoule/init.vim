@@ -1,4 +1,0 @@
-# Ignore everything except this file and the Vundle submodule
-*
-!.gitignore
-!Vundle.vim
