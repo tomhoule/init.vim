@@ -40,7 +40,6 @@ call vundle#end()
 set number
 syntax enable
 filetype plugin indent on
-set history=1000
 set ruler
 set showcmd
 set listchars=tab:▸\ ,trail:¤,nbsp:·,extends:>,precedes:<
@@ -49,13 +48,12 @@ set textwidth=72
 set formatoptions=cqj    " Hard wrap only for comments
 set wrap                 " Enable soft-wrapping
 set linebreak            " Do not cut words in half when soft-wrapping
-set showbreak="> "
+set cpoptions+=n
 set tabstop=8
 set softtabstop=8
 set shiftwidth=4
 set expandtab
 set ignorecase smartcase
-set smarttab
 set foldmethod=marker
 
 " . applies to each line of visual selection
