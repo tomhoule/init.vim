@@ -1,10 +1,4 @@
-" Directories {{{1
-set backupdir=~/.config/nvim/backup/
-set directory=~/.config/nvim/swap/
-set undodir=~/.config/nvim/undo/
-
-" }}}1
-" VimPlug {{{1
+" VimPlug
 call plug#begin()
 
 Plug 'altercation/vim-colors-solarized'
@@ -33,7 +27,7 @@ Plug 'stephpy/vim-yaml'
 
 call plug#end()
 
-" Configuration {{{1
+" Configuration
 set number
 syntax enable
 filetype plugin indent on
@@ -59,8 +53,7 @@ vnoremap . :norm.<CR>
 set background=dark
 colorscheme solarized
 
-" }}}1
-" Keybindings {{{1
+" Keybindings
 let mapleader="»"
 let maplocalleader="«"
 
@@ -85,11 +78,8 @@ noremap! <C-l> <ESC>
 :digraph /^ 8599 " ↗
 :digraph \> 8600 " ↘
 
-" }}}1
-" Language-specific options {{{1
+" Language-specific options
 
-" .tsxもtypescriptとして扱う
+" .tsxもtypescriptとして扱
 autocmd BufNewFile,BufRead *.{ts,tsx} set filetype=typescript
 " let g:syntastic_quiet_messages = { "file:p": [".tsx$", ".ts$"] }
-
-" }}}1
