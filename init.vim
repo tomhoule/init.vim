@@ -1,41 +1,38 @@
 " Directories {{{1
-set runtimepath=~/.config/nvim/bundle/Vundle.vim,$VIMRUNTIME
 set backupdir=~/.config/nvim/backup/
 set directory=~/.config/nvim/swap/
 set undodir=~/.config/nvim/undo/
 
 " }}}1
-" Vundle {{{1
-set runtimepath+=~/.nvim/bundle/Vundle.vim
-filetype off
-call vundle#begin()
+" VimPlug {{{1
+call plug#begin()
 
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'kien/ctrlp.vim'
-Plugin 'jamessan/vim-gnupg'
-Plugin 'majutsushi/tagbar'
-Plugin 'rking/ag.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/syntastic'
-Plugin 'stephpy/vim-yaml'
-Plugin 'tpope/vim-characterize'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'VundleVim/Vundle.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'easymotion/vim-easymotion'
+Plug 'kien/ctrlp.vim'
+Plug 'jamessan/vim-gnupg'
+Plug 'majutsushi/tagbar'
+Plug 'rking/ag.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-characterize'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'VundleVim/Vundle.vim'
 
 " Language-specific plugins
-Plugin 'pangloss/vim-javascript'
-Plugin 'jason0x43/vim-js-indent'
-Plugin 'leafgarland/typescript-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'jason0x43/vim-js-indent'
+Plug 'leafgarland/typescript-vim'
 
-Plugin 'ebfe/vim-racer'
-Plugin 'wting/rust.vim'
+Plug 'ebfe/vim-racer'
+Plug 'wting/rust.vim'
 
-call vundle#end()
+Plug 'stephpy/vim-yaml'
 
-" }}}1
+call plug#end()
+
 " Configuration {{{1
 set number
 syntax enable
