@@ -82,6 +82,7 @@ nnoremap <Leader>ar :set rightleft<CR>
 nnoremap <Leader>nar :set norightleft<CR>
 nmap <F8> :TagbarToggle<CR>
 noremap é :
+" CTRL-L normally redraws. <C-l> <C-l> still works
 noremap! <C-l> <ESC>
 
 :digraph \v 8628 " ↴
