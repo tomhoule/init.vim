@@ -84,6 +84,7 @@ autocmd BufNewFile,BufRead *.{ts,tsx} set filetype=typescript
 " let g:syntastic_quiet_messages = { "file:p": [".tsx$", ".ts$"] }
 
 " ## Rust ##
-autocmd BufNewFile,BufRead *.rs set makeprg=cargo\ build
+autocmd BufNewFile,BufRead *.rs set makeprg=cargo\ rustc\ --\ -Zno-trans
 autocmd BufWritePost *.rs Neomake!
+let g:racer_cmd="~/.multirust/cargo/bin/racer/"
 " errorformat…
