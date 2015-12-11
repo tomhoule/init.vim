@@ -3,8 +3,9 @@ call plug#begin()
 
 Plug 'altercation/vim-colors-solarized'
 Plug 'easymotion/vim-easymotion'
-Plug 'kien/ctrlp.vim'
+Plug 'Chiel92/vim-autoformat'
 Plug 'jamessan/vim-gnupg'
+Plug 'kien/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -84,7 +85,10 @@ autocmd BufNewFile,BufRead *.{ts,tsx} set filetype=typescript
 " let g:syntastic_quiet_messages = { "file:p": [".tsx$", ".ts$"] }
 
 " ## Rust ##
-autocmd BufNewFile,BufRead *.rs set makeprg=cargo\ rustc\ --\ -Zno-trans
+autocmd BufNewFile,BufRead *.rs set makeprg=cargo\ check
 autocmd BufWritePost *.rs Neomake!
+autocmd BufWrite *.rs :Autoformat
 let g:racer_cmd="~/.multirust/cargo/bin/racer/"
+let g:formatdef_rustfmt = '"rustfmt"'
+let g:formatters_rust = ['rustfmt']
 " errorformat…
