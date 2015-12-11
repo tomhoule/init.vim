@@ -83,13 +83,11 @@ noremap! <C-l> <ESC>
 
 " .tsxもtypescriptとして扱
 autocmd BufNewFile,BufRead *.{ts,tsx} set filetype=typescript
-" let g:syntastic_quiet_messages = { "file:p": [".tsx$", ".ts$"] }
+autocmd BufWrite *.{ts,tsx} :Autoformat
 
 " ## Rust ##
 autocmd BufNewFile,BufRead *.rs set makeprg=cargo\ check
 autocmd BufWritePost *.rs Neomake!
 autocmd BufWrite *.rs :Autoformat
 let g:racer_cmd="~/.multirust/cargo/bin/racer/"
-let g:formatdef_rustfmt = '"rustfmt"'
-let g:formatters_rust = ['rustfmt']
 " errorformat…
