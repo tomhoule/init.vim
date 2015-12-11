@@ -45,7 +45,7 @@ set softtabstop=8
 set shiftwidth=4
 set expandtab
 set ignorecase smartcase
-set foldmethod=marker
+set foldmethod=manual
 
 " . applies to each line of visual selection
 vnoremap . :norm.<CR>
@@ -59,6 +59,7 @@ let maplocalleader="«"
 
 " aww yiss! ↴
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>b :ls<CR>:b<space>
 nnoremap <Leader>tt :terminal<CR>
 nnoremap <Leader>to :tabnew<CR>
 nnoremap <Leader>tc :tabclose<CR>
