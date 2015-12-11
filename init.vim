@@ -67,6 +67,7 @@ nnoremap <Leader>h :nohlsearch<CR>
 nnoremap <Leader>d :NERDTree<CR>
 nnoremap <Leader>ag :Ag<Space>
 nnoremap <Leader>gr :AgBuffer<Space>
+nnoremap <Leader>af :Autoformat<CR>
 nnoremap <Leader>ar :set rightleft<CR>
 nnoremap <Leader>nar :set norightleft<CR>
 nmap <F8> :TagbarToggle<CR>
