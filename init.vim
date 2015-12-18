@@ -21,7 +21,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 
 Plug 'ebfe/vim-racer', { 'for': 'rust' }
-Plug 'wting/rust.vim'
+Plug 'rust-lang/rust.vim'
 
 Plug 'stephpy/vim-yaml'
 
@@ -89,6 +89,7 @@ autocmd BufWrite *.{ts,tsx} :Autoformat
 " ## Rust ##
 autocmd BufNewFile,BufRead *.rs set makeprg=cargo\ check
 autocmd BufWritePost *.rs Neomake!
-autocmd BufWrite *.rs :Autoformat
+" autocmd BufWrite *.rs :Autoformat
+let g:rustfmt_autosave = 1
 let g:racer_cmd="~/.multirust/cargo/bin/racer/"
 " errorformat…
