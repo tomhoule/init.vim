@@ -77,6 +77,7 @@ noremap! <C-l> <ESC>
 :digraph L> 8627 " ↳
 :digraph /^ 8599 " ↗
 :digraph \> 8600 " ↘
+:digraph pi 127829 " 🍕 ∀
 
 " # Language-specific options #
 
