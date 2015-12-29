@@ -3,7 +3,6 @@ call plug#begin()
 
 Plug 'altercation/vim-colors-solarized'
 Plug 'easymotion/vim-easymotion'
-Plug 'Chiel92/vim-autoformat'
 Plug 'jamessan/vim-gnupg'
 Plug 'kien/ctrlp.vim'
 Plug 'majutsushi/tagbar'
@@ -68,7 +67,6 @@ nnoremap <Leader>d :NERDTree<CR>
 nnoremap <Leader>f :find<space>*
 nnoremap <Leader>ag :Ag<Space>
 nnoremap <Leader>gr :AgBuffer<Space>
-nnoremap <Leader>af :Autoformat<CR>
 nnoremap <Leader>ar :set rightleft<CR>
 nnoremap <Leader>nar :set norightleft<CR>
 nmap <F8> :TagbarToggle<CR>
@@ -85,12 +83,10 @@ noremap! <C-l> <ESC>
 
 " .tsxもtypescriptとして扱
 autocmd BufNewFile,BufRead *.{ts,tsx} set filetype=typescript
-autocmd BufWrite *.{ts,tsx} :Autoformat
 
 " ## Rust ##
 autocmd BufNewFile,BufRead *.rs set makeprg=cargo\ check
 autocmd BufWritePost *.rs Neomake!
-" autocmd BufWrite *.rs :Autoformat
 let g:rustfmt_autosave = 1
 let g:racer_cmd="~/.multirust/cargo/bin/racer/"
 " errorformat…
