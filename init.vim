@@ -65,6 +65,7 @@ nnoremap <Leader>to :tabnew<CR>
 nnoremap <Leader>tc :tabclose<CR>
 nnoremap <Leader>h :nohlsearch<CR>
 nnoremap <Leader>d :NERDTree<CR>
+nnoremap <Leader>f :find<space>*
 nnoremap <Leader>ag :Ag<Space>
 nnoremap <Leader>gr :AgBuffer<Space>
 nnoremap <Leader>af :Autoformat<CR>
