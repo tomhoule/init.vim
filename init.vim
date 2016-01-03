@@ -4,15 +4,14 @@ call plug#begin()
 Plug 'altercation/vim-colors-solarized'
 Plug 'easymotion/vim-easymotion'
 Plug 'jamessan/vim-gnupg'
-Plug 'kien/ctrlp.vim'
-Plug 'majutsushi/tagbar'
-Plug 'rking/ag.vim'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'scrooloose/nerdcommenter'
+Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
+Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
+Plug 'rking/ag.vim', { 'on': 'Ag' }
+Plug 'scrooloose/nerdcommenter', { 'on': ['NERDComComment', 'NERDComToggleComment', 'NERDComUncommentLine'] }
 Plug 'benekastah/neomake'
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets', { 'on': 'UltiSnipsExpandTrigger' }
 Plug 'tpope/vim-characterize'
-Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive', { 'on': ['Gstatus', 'Gdiff', 'Gcommit', 'Git'] }
 Plug 'tpope/vim-surround'
 
 " ## Language-specific plugins ##
@@ -63,7 +62,6 @@ nnoremap <Leader>tt :terminal<CR>
 nnoremap <Leader>to :tabnew<CR>
 nnoremap <Leader>tc :tabclose<CR>
 nnoremap <Leader>h :nohlsearch<CR>
-nnoremap <Leader>d :NERDTree<CR>
 nnoremap <Leader>f :find<space>*
 nnoremap <Leader>ag :Ag<Space>
 nnoremap <Leader>gr :AgBuffer<Space>
