@@ -7,9 +7,9 @@ Plug 'jamessan/vim-gnupg'
 Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
-Plug 'scrooloose/nerdcommenter', { 'on': ['NERDComComment', 'NERDComToggleComment', 'NERDComUncommentLine'] }
+Plug 'scrooloose/nerdcommenter'
 Plug 'benekastah/neomake'
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets', { 'on': 'UltiSnipsExpandTrigger' }
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-fugitive', { 'on': ['Gstatus', 'Gdiff', 'Gcommit', 'Git'] }
 Plug 'tpope/vim-surround'
