@@ -2,16 +2,17 @@
 call plug#begin()
 
 Plug 'altercation/vim-colors-solarized'
+Plug 'benekastah/neomake'
 Plug 'easymotion/vim-easymotion'
 Plug 'jamessan/vim-gnupg'
 Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'scrooloose/nerdcommenter'
-Plug 'benekastah/neomake'
+Plug 'shougo/deoplete.nvim'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'tpope/vim-characterize'
-Plug 'tpope/vim-fugitive', { 'on': ['Gstatus', 'Gdiff', 'Gcommit', 'Git'] }
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 
 " ## Language-specific plugins ##
@@ -45,7 +46,10 @@ set expandtab
 set ignorecase smartcase
 set foldmethod=manual
 
-" . applies to each line of visual selection
+let g:deoplete#enable_at_startup = 1
+let g:UltiSnipsSnippetDirectories = ["UltiSnips", "my-snippets"]
+
+" . applies to each line of visual selectioen
 vnoremap . :norm.<CR>
 
 set background=dark
@@ -76,7 +80,6 @@ noremap! <C-l> <ESC>
 :digraph L> 8627 " ↳
 :digraph /^ 8599 " ↗
 :digraph \> 8600 " ↘
-:digraph pi 127829 " 🍕 ∀
 
 " # Language-specific options #
 
