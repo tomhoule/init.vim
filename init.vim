@@ -5,11 +5,11 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'benekastah/neomake'
 Plug 'easymotion/vim-easymotion'
 Plug 'jamessan/vim-gnupg'
-Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
-Plug 'rking/ag.vim', { 'on': 'Ag' }
+Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'shougo/deoplete.nvim'
+Plug 'Valloric/YouCompleteMe'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-fugitive'
@@ -66,9 +66,11 @@ nnoremap <Leader>tt :terminal<CR>
 nnoremap <Leader>to :tabnew<CR>
 nnoremap <Leader>tc :tabclose<CR>
 nnoremap <Leader>h :nohlsearch<CR>
-nnoremap <Leader>f :find<space>*
+nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader>ag :Ag<Space>
 nnoremap <Leader>gr :AgBuffer<Space>
+nnoremap <Leader>git :Gstatus<CR>
+nnoremap <Leader>cp :AgFile!<Space>
 nnoremap <Leader>ar :set rightleft<CR>
 nnoremap <Leader>nar :set norightleft<CR>
 nmap <F8> :TagbarToggle<CR>
