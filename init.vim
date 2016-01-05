@@ -5,9 +5,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'benekastah/neomake'
 Plug 'easymotion/vim-easymotion'
 Plug 'jamessan/vim-gnupg'
-Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
-Plug 'rking/ag.vim', { 'on': 'Ag' }
+Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'shougo/deoplete.nvim'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -69,6 +68,7 @@ nnoremap <Leader>h :nohlsearch<CR>
 nnoremap <Leader>f :find<space>*
 nnoremap <Leader>ag :Ag<Space>
 nnoremap <Leader>gr :AgBuffer<Space>
+nnoremap <Leader>cp :AgFile!<Space>
 nnoremap <Leader>ar :set rightleft<CR>
 nnoremap <Leader>nar :set norightleft<CR>
 nmap <F8> :TagbarToggle<CR>
