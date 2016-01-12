@@ -1,7 +1,6 @@
 " # Plugins #
 call plug#begin()
 
-Plug 'altercation/vim-colors-solarized'
 Plug 'benekastah/neomake'
 Plug 'easymotion/vim-easymotion'
 Plug 'jamessan/vim-gnupg'
@@ -9,11 +8,12 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'Valloric/YouCompleteMe'
+Plug 'patrickw276/one-dark.vim'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'Valloric/YouCompleteMe'
 
 " ## Language-specific plugins ##
 Plug 'pangloss/vim-javascript'
@@ -52,8 +52,9 @@ let g:UltiSnipsSnippetDirectories = ["UltiSnips", "my-snippets"]
 " . applies to each line of visual selectioen
 vnoremap . :norm.<CR>
 
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
-colorscheme solarized
+colorscheme one-dark
 
 " # Keybindings #
 let mapleader="»"
