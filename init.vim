@@ -5,23 +5,19 @@ Plug 'benekastah/neomake'
 Plug 'easymotion/vim-easymotion'
 Plug 'jamessan/vim-gnupg'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
+Plug 'nanotech/jellybeans.vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'patrickw276/one-dark.vim'
+Plug 'Shougo/deoplete.nvim'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'Valloric/YouCompleteMe'
 
 " ## Language-specific plugins ##
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
-
-Plug 'ebfe/vim-racer', { 'for': 'rust' }
 Plug 'rust-lang/rust.vim'
-
 Plug 'stephpy/vim-yaml'
 
 call plug#end()
@@ -54,7 +50,7 @@ vnoremap . :norm.<CR>
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
-colorscheme one-dark
+colorscheme jellybeans
 
 " # Keybindings #
 let mapleader="»"
@@ -73,7 +69,6 @@ nnoremap <Leader>gr :AgBuffer<Space>
 nnoremap <Leader>git :Gstatus<CR>
 nnoremap <Leader>ar :set rightleft<CR>
 nnoremap <Leader>nar :set norightleft<CR>
-nmap <F8> :TagbarToggle<CR>
 noremap é :
 " CTRL-L normally redraws. <C-l> <C-l> still works
 noremap! <C-l> <ESC>
@@ -92,5 +87,4 @@ autocmd BufNewFile,BufRead *.{ts,tsx} set filetype=typescript
 autocmd BufNewFile,BufRead *.rs set makeprg=cargo\ check
 autocmd BufWritePost *.rs Neomake!
 let g:rustfmt_autosave = 1
-let g:racer_cmd="~/.multirust/cargo/bin/racer/"
 " errorformat…
