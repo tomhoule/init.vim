@@ -15,6 +15,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 
 " ## Language-specific plugins ##
+Plug 'derekwyatt/vim-scala'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'rust-lang/rust.vim'
