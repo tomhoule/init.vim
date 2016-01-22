@@ -13,6 +13,7 @@ Plug 'shougo/deoplete.nvim'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
 
 " ## Language-specific plugins ##
 Plug 'pangloss/vim-javascript'
@@ -41,6 +42,7 @@ set shiftwidth=4
 set expandtab
 set ignorecase smartcase
 set foldmethod=manual
+set nohidden
 
 let g:deoplete#enable_at_startup = 1
 let g:UltiSnipsSnippetDirectories = ["UltiSnips", "my-snippets"]
@@ -61,6 +63,7 @@ let maplocalleader="«"
 " aww yiss! ↴
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>b :ls<CR>:b<space>
+nnoremap <Leader>d :Explore<CR>:b<space>
 nnoremap <Leader>tt :terminal<CR>
 nnoremap <Leader>to :tabnew<CR>
 nnoremap <Leader>tc :tabclose<CR>
@@ -82,7 +85,7 @@ noremap! <C-l> <ESC>
 
 " # Language-specific options #
 
-" .tsxもtypescriptとして扱
+" .tsxもtypescriptとして扱う
 autocmd BufNewFile,BufRead *.{ts,tsx} set filetype=typescript
 
 " ## Rust ##
