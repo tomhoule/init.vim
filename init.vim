@@ -1,6 +1,7 @@
 " # Plugins #
 call plug#begin()
 
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'benekastah/neomake'
 Plug 'easymotion/vim-easymotion'
 Plug 'jamessan/vim-gnupg'
@@ -8,11 +9,11 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'nanotech/jellybeans.vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'Shougo/deoplete.nvim'
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'shougo/deoplete.nvim'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
 
 " ## Language-specific plugins ##
 Plug 'derekwyatt/vim-scala'
@@ -42,6 +43,7 @@ set shiftwidth=4
 set expandtab
 set ignorecase smartcase
 set foldmethod=manual
+set nohidden
 
 let g:deoplete#enable_at_startup = 1
 let g:UltiSnipsSnippetDirectories = ["UltiSnips", "my-snippets"]
@@ -51,7 +53,9 @@ vnoremap . :norm.<CR>
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
-colorscheme jellybeans
+" colorscheme solarized
+" see https://github.com/neovim/neovim/issues/2953
+autocmd VimEnter * colorscheme jellybeans
 
 " # Keybindings #
 let mapleader="»"
@@ -60,6 +64,7 @@ let maplocalleader="«"
 " aww yiss! ↴
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>b :ls<CR>:b<space>
+nnoremap <Leader>d :Explore<CR>:b<space>
 nnoremap <Leader>tt :terminal<CR>
 nnoremap <Leader>to :tabnew<CR>
 nnoremap <Leader>tc :tabclose<CR>
@@ -81,7 +86,7 @@ noremap! <C-l> <ESC>
 
 " # Language-specific options #
 
-" .tsxもtypescriptとして扱
+" .tsxもtypescriptとして扱う
 autocmd BufNewFile,BufRead *.{ts,tsx} set filetype=typescript
 
 " ## Rust ##
