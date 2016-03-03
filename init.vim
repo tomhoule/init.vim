@@ -6,14 +6,17 @@ Plug 'benekastah/neomake'
 Plug 'easymotion/vim-easymotion'
 Plug 'jamessan/vim-gnupg'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'justinmk/vim-dirvish'
+Plug 'mhinz/vim-signify'
 Plug 'nanotech/jellybeans.vim'
 Plug 'rking/ag.vim'
-Plug 'scrooloose/nerdcommenter'
 Plug 'shougo/deoplete.nvim'
 Plug 'tpope/vim-characterize'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-vinegar'
+Plug 'wellle/targets.vim'
 
 " ## Language-specific plugins ##
 Plug 'derekwyatt/vim-scala'
@@ -44,6 +47,7 @@ set expandtab
 set ignorecase smartcase
 set foldmethod=manual
 set nohidden
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 let g:deoplete#enable_at_startup = 1
 let g:UltiSnipsSnippetDirectories = ["UltiSnips", "my-snippets"]
@@ -53,7 +57,6 @@ vnoremap . :norm.<CR>
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
-" colorscheme solarized
 " see https://github.com/neovim/neovim/issues/2953
 autocmd VimEnter * colorscheme jellybeans
 
@@ -64,7 +67,7 @@ let maplocalleader="«"
 " aww yiss! ↴
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>b :ls<CR>:b<space>
-nnoremap <Leader>d :Explore<CR>
+nnoremap <Leader>d :Dirvish<CR>
 nnoremap <Leader>tt :terminal<CR>
 nnoremap <Leader>to :tabnew<CR>
 nnoremap <Leader>tc :tabclose<CR>
