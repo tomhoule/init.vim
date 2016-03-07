@@ -96,4 +96,9 @@ autocmd BufNewFile,BufRead *.{ts,tsx} set filetype=typescript
 autocmd BufNewFile,BufRead *.rs set makeprg=cargo\ check
 autocmd BufWritePost *.rs Neomake!
 let g:rustfmt_autosave = 1
-" errorformat…
+
+" ## Java ##
+autocmd BufNewFile,BufRead *.java set makeprg=mvn\ -q\ compile
+autocmd BufNewFile,BufRead *.java let g:neomake_open_list = 1
+autocmd BufWritePost *.java Neomake!
+set errorformat=[ERROR]\ %f:[%l\\,%v]\ %m
