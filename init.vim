@@ -19,7 +19,6 @@ Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
 
 " ## Language-specific plugins ##
-Plug 'derekwyatt/vim-scala'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'rust-lang/rust.vim'
