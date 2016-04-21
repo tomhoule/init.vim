@@ -92,6 +92,9 @@ noremap! <C-l> <ESC>
 " .tsxもtypescriptとして扱う
 autocmd BufNewFile,BufRead *.{ts,tsx} set filetype=typescript
 
+" ## Docker ##
+autocmd BufNewFile,BufRead *.dockerfile set filetype=dockerfile
+
 " ## Rust ##
 autocmd BufNewFile,BufRead *.rs set makeprg=cargo\ check
 autocmd BufWritePost *.rs Neomake!
