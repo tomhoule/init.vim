@@ -19,7 +19,6 @@ Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
 
 " ## Language-specific plugins ##
-Plug 'derekwyatt/vim-scala'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'rust-lang/rust.vim'
@@ -101,7 +100,12 @@ autocmd BufWritePost *.rs Neomake!
 let g:rustfmt_autosave = 1
 
 " ## Java ##
+autocmd FileType java setlocal errorformat=[ERROR]\ %f:[%l\\,%v]\ %m
 autocmd BufNewFile,BufRead *.java set makeprg=mvn\ -q\ compile
 autocmd BufNewFile,BufRead *.java let g:neomake_open_list = 1
 autocmd BufWritePost *.java Neomake!
-set errorformat=[ERROR]\ %f:[%l\\,%v]\ %m
+
+" ## Python ##
+autocmd FileType python setlocal formatprg=autopep8\ -
+autocmd BufNewFile,BufRead *.py set makeprg=flake8\ %
+autocmd BufWritePost *.py Neomake!
