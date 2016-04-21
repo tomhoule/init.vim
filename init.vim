@@ -114,5 +114,5 @@ autocmd BufWritePost *.java Neomake!
 
 " ## Python ##
 autocmd FileType python setlocal formatprg=autopep8\ -
-autocmd BufNewFile,BufRead *.py set makeprg=flake8\ %
-autocmd BufWritePost *.py Neomake!
+autocmd BufNewFile,BufRead *.py set makeprg=flake8
+autocmd BufWritePost *.py Neomake
