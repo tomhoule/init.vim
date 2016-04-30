@@ -3,14 +3,11 @@ call plug#begin()
 
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'benekastah/neomake'
-Plug 'jamessan/vim-gnupg'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'justinmk/vim-sneak'
 Plug 'justinmk/vim-dirvish'
 Plug 'mhinz/vim-signify'
 Plug 'nanotech/jellybeans.vim'
-Plug 'rking/ag.vim'
-Plug 'shougo/deoplete.nvim'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -46,8 +43,8 @@ set ignorecase smartcase
 set foldmethod=manual
 set nohidden
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+set grepprg=ag\ --vimgrep
 
-let g:deoplete#enable_at_startup = 1
 let g:UltiSnipsSnippetDirectories = ["UltiSnips", "my-snippets"]
 
 " . applies to each line of visual selectioen
