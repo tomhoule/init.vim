@@ -67,8 +67,6 @@ nnoremap <Leader>to :tabnew<CR>
 nnoremap <Leader>tc :tabclose<CR>
 nnoremap <Leader>h :nohlsearch<CR>
 nnoremap <Leader>f :FZF<CR>
-nnoremap <Leader>ag :Ag<Space>
-nnoremap <Leader>gr :AgBuffer<Space>
 nnoremap <Leader>git :Gstatus<CR>
 nnoremap <Leader>ar :set rightleft<CR>
 nnoremap <Leader>nar :set norightleft<CR>
