@@ -44,8 +44,6 @@ set nohidden
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set grepprg=ag\ --vimgrep
 
-let g:UltiSnipsSnippetDirectories = ["UltiSnips", "my-snippets"]
-
 " . applies to each line of visual selectioen
 vnoremap . :norm.<CR>
 
