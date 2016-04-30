@@ -3,9 +3,9 @@ call plug#begin()
 
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'benekastah/neomake'
-Plug 'easymotion/vim-easymotion'
 Plug 'jamessan/vim-gnupg'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'justinmk/vim-sneak'
 Plug 'justinmk/vim-dirvish'
 Plug 'mhinz/vim-signify'
 Plug 'nanotech/jellybeans.vim'
