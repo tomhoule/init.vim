@@ -89,7 +89,7 @@ let g:neomake_typescript_tslint_maker = {
     \ 'args': ['%p'],
     \ 'errorformat': '%f[%l\, %c]: %m',
     \ }
-let g:neomake_typescript_enabled_makers = ['tslint']
+let g:neomake_typescript_enabled_makers = ['tslint','tsc']
 autocmd BufNewFile,BufRead *.{ts,tsx} set filetype=typescript
 autocmd BufNewFile,BufRead *.{js,jsx,ts,tsx} :ia <buffer> cl console.log
 autocmd BufWritePost *.{ts,tsx} Neomake
