@@ -54,12 +54,12 @@ autocmd VimEnter * colorscheme jellybeans
 
 " # Keybindings #
 let mapleader="»"
-let maplocalleader="«"
 
 " aww yiss! ↴
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>b :ls<CR>:b<space>
 nnoremap <Leader>d :Dirvish %<CR>
+nnoremap <Leader>p :Dirvish<CR>
 nnoremap <Leader>tt :terminal<CR>
 nnoremap <Leader>to :tabnew<CR>
 nnoremap <Leader>tc :tabclose<CR>
