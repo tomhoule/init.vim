@@ -1,7 +1,6 @@
 " # Plugins #
 call plug#begin()
 
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'benekastah/neomake'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'justinmk/vim-sneak'
@@ -92,6 +91,7 @@ let g:neomake_typescript_tslint_maker = {
     \ }
 let g:neomake_typescript_enabled_makers = ['tslint']
 autocmd BufNewFile,BufRead *.{ts,tsx} set filetype=typescript
+autocmd BufNewFile,BufRead *.{js,jsx,ts,tsx} :ia <buffer> cl console.log
 autocmd BufWritePost *.{ts,tsx} Neomake
 
 " ## Docker ##
