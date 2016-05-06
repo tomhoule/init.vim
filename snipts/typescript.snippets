@@ -1,0 +1,35 @@
+snippet cl "console.log(...)"
+console.log($1)
+endsnippet
+
+snippet ce "console.error(...)"
+console.error($1)
+endsnippet
+
+snippet if "if statement"
+if ($1) {
+    $2
+}
+endsnippet
+
+snippet switch "switch statement"
+switch ($1) {
+    default:
+        $2;
+}
+endsnippet
+
+snippet reactcomp "react component class declaration"
+class $1 extends Component<$2, $3> {
+
+    render() {
+        return (
+            $0
+        );
+    }
+}
+endsnippet
+
+snippet ar "arrow function"
+($1: ${2:any}) => $0
+endsnippet

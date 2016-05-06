@@ -7,6 +7,8 @@ Plug 'justinmk/vim-sneak'
 Plug 'justinmk/vim-dirvish'
 Plug 'mhinz/vim-signify'
 Plug 'nanotech/jellybeans.vim'
+Plug 'SirVer/ultisnips'
+Plug 'Shougo/deoplete.nvim'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -52,6 +54,9 @@ set background=dark
 " see https://github.com/neovim/neovim/issues/2953
 autocmd VimEnter * colorscheme jellybeans
 
+let g:deoplete#enable_at_startup=1
+let g:UltiSnipsSnippetDirectories=["snipts"]
+
 " # Keybindings #
 let mapleader="»"
 
@@ -87,7 +92,6 @@ let g:neomake_typescript_tslint_maker = {
     \ }
 let g:neomake_typescript_enabled_makers = ['tslint','tsc']
 autocmd BufNewFile,BufRead *.{ts,tsx} set filetype=typescript
-autocmd BufNewFile,BufRead *.{js,jsx,ts,tsx} :ia <buffer> cl console.log
 autocmd BufWritePost *.{ts,tsx} Neomake
 
 " ## Docker ##
