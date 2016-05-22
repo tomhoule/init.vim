@@ -16,6 +16,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 
 " ## Language-specific plugins ##
+Plug 'cespare/vim-toml'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'rust-lang/rust.vim'
