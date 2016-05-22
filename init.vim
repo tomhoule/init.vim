@@ -34,16 +34,11 @@ set listchars=tab:▸\ ,trail:¤,nbsp:·,extends:>,precedes:<
 set list
 set textwidth=72
 set formatoptions=cqj    " Hard wrap only for comments
-set wrap                 " Enable soft-wrapping
 set linebreak            " Do not cut words in half when soft-wrapping
-set cpoptions+=n
 set tabstop=8
-set softtabstop=8
 set shiftwidth=4
 set expandtab
 set ignorecase smartcase
-set foldmethod=manual
-set nohidden
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set grepprg=ag\ --vimgrep
 
