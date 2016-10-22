@@ -98,12 +98,6 @@ autocmd BufNewFile,BufRead *.rs set makeprg=cargo\ check
 autocmd BufWritePost *.rs Neomake!
 let g:rustfmt_autosave = 1
 
-" ## Java ##
-autocmd FileType java setlocal errorformat=[ERROR]\ %f:[%l\\,%v]\ %m
-autocmd BufNewFile,BufRead *.java set makeprg=mvn\ -q\ compile
-autocmd BufNewFile,BufRead *.java let g:neomake_open_list = 1
-autocmd BufWritePost *.java Neomake!
-
 " ## Python ##
 autocmd FileType python setlocal formatprg=autopep8\ -
 autocmd BufNewFile,BufRead *.py set makeprg=flake8
