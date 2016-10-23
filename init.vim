@@ -26,9 +26,11 @@ Plug 'stephpy/vim-yaml'
 
 call plug#end()
 
+set termguicolors
+colorscheme jellybeans
+
 " # Configuration #
 set number
-syntax enable
 filetype plugin indent on
 set ruler
 set showcmd
@@ -46,11 +48,6 @@ set grepprg=ag\ --vimgrep
 
 " . applies to each line of visual selectioen
 vnoremap . :norm.<CR>
-
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set background=dark
-" see https://github.com/neovim/neovim/issues/2953
-autocmd VimEnter * colorscheme jellybeans
 
 let g:deoplete#enable_at_startup=1
 let g:UltiSnipsSnippetDirectories=["snipts"]
