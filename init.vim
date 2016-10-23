@@ -72,6 +72,8 @@ nnoremap <Leader>nar :set norightleft<CR>
 noremap é :
 " CTRL-L normally redraws. <C-l> <C-l> still works
 noremap! <C-l> <ESC>
+" Disable ex mode
+noremap Q <nop>
 
 :digraph \v 8628 " ↴
 :digraph L> 8627 " ↳
