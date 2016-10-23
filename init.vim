@@ -2,6 +2,7 @@
 call plug#begin()
 
 Plug 'benekastah/neomake'
+Plug 'benmills/vimux'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'justinmk/vim-sneak'
