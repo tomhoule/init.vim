@@ -44,7 +44,7 @@ set shiftwidth=4
 set expandtab
 set ignorecase smartcase
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-set grepprg=ag\ --vimgrep
+set grepprg=rg\ --vimgrep
 
 " . applies to each line of visual selectioen
 vnoremap . :norm.<CR>
@@ -68,6 +68,7 @@ nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader>git :Gstatus<CR>
 nnoremap <Leader>ar :set rightleft<CR>
 nnoremap <Leader>nar :set norightleft<CR>
+nnoremap <Leader>rg :grep<SPACE>
 noremap é :
 " CTRL-L normally redraws. <C-l> <C-l> still works
 noremap! <C-l> <ESC>
