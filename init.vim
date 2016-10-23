@@ -45,6 +45,7 @@ set expandtab
 set ignorecase smartcase
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set grepprg=rg\ --vimgrep
+set scroll=5
 
 " . applies to each line of visual selectioen
 vnoremap . :norm.<CR>
