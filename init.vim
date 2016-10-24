@@ -96,9 +96,7 @@ autocmd BufWritePost *.{ts,tsx} Neomake
 autocmd BufNewFile,BufRead *.dockerfile set filetype=dockerfile
 
 " ## Rust ##
-autocmd BufNewFile,BufRead *.rs set makeprg=cargo\ check
 autocmd BufWritePost *.rs Neomake!
-let g:rustfmt_autosave = 1
 
 " ## Python ##
 autocmd FileType python setlocal formatprg=autopep8\ -
