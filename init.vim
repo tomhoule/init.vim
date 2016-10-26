@@ -86,11 +86,6 @@ noremap Q <nop>
 
 " ## Typescript ##
 " .tsxもtypescriptとして扱う
-let g:neomake_typescript_tslint_maker = {
-    \ 'args': ['%p'],
-    \ 'errorformat': '%f[%l\, %c]: %m',
-    \ }
-let g:neomake_typescript_enabled_makers = ['tslint']
 autocmd BufNewFile,BufRead *.{ts,tsx} set filetype=typescript
 autocmd BufWritePost *.{ts,tsx} Neomake
 
