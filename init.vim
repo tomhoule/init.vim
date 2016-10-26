@@ -99,3 +99,6 @@ autocmd BufWritePost *.rs Neomake!
 autocmd FileType python setlocal formatprg=autopep8\ -
 autocmd BufNewFile,BufRead *.py set makeprg=flake8
 autocmd BufWritePost *.py Neomake
+
+" ## Ruby ##
+autocmd! BufWritePost *.rb Neomake rubocop
