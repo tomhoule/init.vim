@@ -87,13 +87,9 @@ noremap Q <nop>
 " ## Typescript ##
 " .tsxもtypescriptとして扱う
 autocmd BufNewFile,BufRead *.{ts,tsx} set filetype=typescript
-autocmd BufWritePost *.{ts,tsx} Neomake
 
 " ## Docker ##
 autocmd BufNewFile,BufRead *.dockerfile set filetype=dockerfile
-
-" ## Rust ##
-autocmd BufWritePost *.rs Neomake!
 
 " ## Python ##
 autocmd FileType python setlocal formatprg=autopep8\ -
