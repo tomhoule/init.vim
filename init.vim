@@ -38,7 +38,7 @@ set listchars=tab:▸\ ,trail:¤,nbsp:·,extends:>,precedes:<
 set list
 set textwidth=72
 set formatoptions=cqj    " Hard wrap only for comments
-set linebreak            " Do not cut words in half when soft-wrapping
+set nolinebreak          " Do not cut words in half when soft-wrapping
 set tabstop=8
 set shiftwidth=4
 set expandtab
