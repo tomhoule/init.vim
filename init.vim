@@ -36,9 +36,10 @@ set ruler
 set showcmd
 set listchars=tab:▸\ ,trail:¤,nbsp:·,extends:>,precedes:<
 set list
-set textwidth=72
-set formatoptions=cqj    " Hard wrap only for comments
-set nolinebreak          " Do not cut words in half when soft-wrapping
+set textwidth=0
+set formatoptions=cqajmn
+set linebreak
+set breakindent
 set tabstop=8
 set shiftwidth=4
 set expandtab
