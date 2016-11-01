@@ -70,7 +70,7 @@ nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader>git :Gstatus<CR>
 nnoremap <Leader>ar :set rightleft<CR>
 nnoremap <Leader>nar :set norightleft<CR>
-nnoremap <Leader>rg :grep<SPACE>
+nnoremap <Leader>rg :grep  .<LEFT><LEFT>
 noremap é :
 " CTRL-L normally redraws. <C-l> <C-l> still works
 noremap! <C-l> <ESC>
