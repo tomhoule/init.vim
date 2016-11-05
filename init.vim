@@ -37,7 +37,7 @@ set showcmd
 set listchars=tab:▸\ ,trail:¤,nbsp:·,extends:>,precedes:<
 set list
 set textwidth=0
-set formatoptions=cqajmn
+set formatoptions=qjmn
 set linebreak
 set breakindent
 set tabstop=8
