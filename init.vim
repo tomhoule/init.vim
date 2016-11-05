@@ -75,8 +75,7 @@ nnoremap <Leader>rg :grep  .<LEFT><LEFT>
 noremap é :
 " CTRL-L normally redraws. <C-l> <C-l> still works
 noremap! <C-l> <ESC>
-" Disable ex mode
-noremap Q <nop>
+noremap Q @q
 
 :digraph \v 8628 " ↴
 :digraph L> 8627 " ↳
