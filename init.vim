@@ -96,4 +96,5 @@ autocmd BufWritePost *.py Neomake
 
 " ## Ruby ##
 autocmd! BufWritePost *.rb Neomake rubocop
+autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
 autocmd BufNewFile,BufRead *.thor set filetype=ruby
