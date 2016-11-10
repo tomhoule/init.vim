@@ -64,8 +64,6 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>b :ls<CR>:b<space>
 nnoremap <Leader>d :Dirvish %<CR>
 nnoremap <Leader>p :Dirvish<CR>
-nnoremap <Leader>to :tabnew<CR>
-nnoremap <Leader>tc :tabclose<CR>
 nnoremap <Leader>h :nohlsearch<CR>
 nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader>git :Gstatus<CR>
