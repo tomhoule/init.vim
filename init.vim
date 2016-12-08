@@ -102,3 +102,6 @@ autocmd BufNewFile,BufRead *.thor set filetype=ruby
 
 " ## JS ##
 let g:jsx_ext_required = 0
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_javascript_jsx_enabled_makers = ['eslint']
+autocmd! BufWritePost *.js Neomake
