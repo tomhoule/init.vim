@@ -20,6 +20,7 @@ Plug 'tpope/vim-surround'
 " ## Language-specific plugins ##
 Plug 'cespare/vim-toml'
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'stephpy/vim-yaml'
@@ -98,3 +99,6 @@ autocmd BufWritePost *.py Neomake
 autocmd! BufWritePost *.rb Neomake rubocop
 autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
 autocmd BufNewFile,BufRead *.thor set filetype=ruby
+
+" ## JS ##
+let g:jsx_ext_required = 0
