@@ -83,6 +83,9 @@ noremap Q @q
 
 " # Language-specific options #
 
+" ## Rust ##
+autocmd FileType rust nnoremap <Leader>asm :RustEmitAsm<CR>
+
 " ## Typescript ##
 " .tsxもtypescriptとして扱う
 autocmd BufNewFile,BufRead *.{ts,tsx} set filetype=typescript
