@@ -51,6 +51,7 @@ set grepprg=rg\ --vimgrep
 set scroll=5
 set exrc
 set secure
+set autochdir
 
 " . applies to each line of visual selectioen
 vnoremap . :norm.<CR>
