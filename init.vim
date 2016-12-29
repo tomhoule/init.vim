@@ -16,7 +16,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'yuttie/comfortable-motion.vim'
 
 " ## Language-specific plugins ##
 Plug 'cespare/vim-toml'
