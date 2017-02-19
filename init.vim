@@ -2,15 +2,12 @@
 call plug#begin()
 
 Plug 'benekastah/neomake'
-Plug 'benmills/vimux'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'justinmk/vim-sneak'
 Plug 'justinmk/vim-dirvish'
 Plug 'mhinz/vim-signify'
 Plug 'nanotech/jellybeans.vim'
-Plug 'SirVer/ultisnips'
-Plug 'Shougo/deoplete.nvim'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-commentary'
@@ -23,7 +20,6 @@ Plug 'ap/vim-css-color'
 Plug 'JulesWang/css.vim'
 Plug 'cespare/vim-toml'
 Plug 'pangloss/vim-javascript'
-Plug 'matchit.zip'
 Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'rust-lang/rust.vim'
@@ -57,10 +53,6 @@ set secure
 
 " . applies to each line of visual selectioen
 vnoremap . :norm.<CR>
-
-let g:deoplete#enable_at_startup=1
-let g:deoplete#file#enable_buffer_path=1
-let g:UltiSnipsSnippetDirectories=["snipts"]
 
 let $FZF_DEFAULT_COMMAND='rg --files'
 
