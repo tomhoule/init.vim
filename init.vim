@@ -24,6 +24,7 @@ Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'stephpy/vim-yaml'
+Plug 'derekwyatt/vim-scala'
 
 call plug#end()
 
