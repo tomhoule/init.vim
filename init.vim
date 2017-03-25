@@ -50,6 +50,9 @@ set grepprg=rg\ --vimgrep
 set scroll=5
 set exrc
 set secure
+set backupcopy=yes " The default behaviour breaks filesystem watchers
+set cursorline
+set wildmenu
 
 " . applies to each line of visual selectioen
 vnoremap . :norm.<CR>
