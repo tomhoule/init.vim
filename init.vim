@@ -78,6 +78,8 @@ noremap é :
 " CTRL-L normally redraws. <C-l> <C-l> still works
 noremap! <C-l> <ESC>
 noremap Q @q
+nnoremap j gj
+nnoremap k gk
 
 :digraph \v 8628 " ↴
 :digraph L> 8627 " ↳
