@@ -4,6 +4,7 @@ call plug#begin()
 Plug 'benekastah/neomake'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'justinmk/vim-dirvish'
 Plug 'mhinz/vim-signify'
@@ -65,11 +66,12 @@ let mapleader="»"
 
 " aww yiss! ↴
 nnoremap <Leader>w :w<CR>
-nnoremap <Leader>b :ls<CR>:b<space>
 nnoremap <Leader>d :Dirvish %<CR>
 nnoremap <Leader>p :Dirvish<CR>
 nnoremap <Leader>h :nohlsearch<CR>
 nnoremap <Leader>f :FZF<CR>
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>m :Marks<CR>
 nnoremap <Leader>git :Gstatus<CR>
 nnoremap <Leader>ar :set rightleft<CR>
 nnoremap <Leader>nar :set norightleft<CR>
