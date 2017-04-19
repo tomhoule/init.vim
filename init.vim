@@ -82,6 +82,7 @@ noremap! <C-l> <ESC>
 noremap Q @q
 nnoremap j gj
 nnoremap k gk
+imap <c-x><c-l> <plug>(fzf-complete-line)
 
 :digraph \v 8628 " ↴
 :digraph L> 8627 " ↳
