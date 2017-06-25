@@ -19,14 +19,15 @@ Plug 'tpope/vim-surround'
 
 " ## Language-specific plugins ##
 Plug 'ap/vim-css-color'
-Plug 'JulesWang/css.vim'
 Plug 'cespare/vim-toml'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+Plug 'derekwyatt/vim-scala'
+Plug 'elixir-lang/vim-elixir'
+Plug 'JulesWang/css.vim'
 Plug 'leafgarland/typescript-vim'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
 Plug 'rust-lang/rust.vim'
 Plug 'stephpy/vim-yaml'
-Plug 'derekwyatt/vim-scala'
 
 call plug#end()
 
