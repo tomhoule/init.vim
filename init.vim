@@ -26,6 +26,7 @@ Plug 'JulesWang/css.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
+Plug 'raichoo/purescript-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'stephpy/vim-yaml'
 
