@@ -23,12 +23,17 @@ Plug 'cespare/vim-toml'
 Plug 'derekwyatt/vim-scala'
 Plug 'elixir-lang/vim-elixir'
 Plug 'JulesWang/css.vim'
-Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'raichoo/purescript-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'stephpy/vim-yaml'
+
+" ## Typescript ##
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'quramy/tsuquyomi'
+Plug 'Shougo/vimproc'
 
 " ## LSP ##
 Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
@@ -101,8 +106,9 @@ nnoremap k gk
 autocmd FileType rust nnoremap <Leader>asm :RustEmitAsm<CR>
 
 " ## Typescript ##
-" .tsxもtypescriptとして扱う
-autocmd BufNewFile,BufRead *.{ts,tsx} set filetype=typescript
+autocmd FileType typescript nmap <buffer> <Leader>t :
+            \ <C-u>echo tsuquyomi#hint()<CR>
+autocmd BufNewFile,BufRead *.tsx set filetype=typescript.jsx
 
 " ## Docker ##
 autocmd BufNewFile,BufRead *.dockerfile set filetype=dockerfile
