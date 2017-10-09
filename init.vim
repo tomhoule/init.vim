@@ -4,6 +4,7 @@ call plug#begin()
 Plug 'benekastah/neomake'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'fcpg/vim-farout'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-dirvish'
@@ -43,7 +44,7 @@ Plug 'Shougo/echodoc.vim'
 call plug#end()
 
 set termguicolors
-colorscheme jellybeans
+colorscheme farout
 
 " # Configuration #
 set number
