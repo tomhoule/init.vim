@@ -4,7 +4,7 @@ call plug#begin()
 Plug 'benekastah/neomake'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'fcpg/vim-farout'
+" Plug 'fcpg/vim-farout'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-dirvish'
@@ -25,8 +25,8 @@ Plug 'cespare/vim-toml'
 Plug 'derekwyatt/vim-scala'
 Plug 'elixir-lang/vim-elixir'
 Plug 'JulesWang/css.vim'
-Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
+" Plug 'mxw/vim-jsx'
+" Plug 'pangloss/vim-javascript'
 Plug 'raichoo/purescript-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'stephpy/vim-yaml'
@@ -44,7 +44,7 @@ Plug 'Shougo/echodoc.vim'
 call plug#end()
 
 set termguicolors
-colorscheme farout
+colorscheme jellybeans
 
 " # Configuration #
 set number
@@ -110,7 +110,8 @@ autocmd FileType rust nnoremap <Leader>asm :RustEmitAsm<CR>
 " ## Typescript ##
 autocmd FileType typescript nmap <buffer> <Leader>t :
             \ <C-u>echo tsuquyomi#hint()<CR>
-autocmd BufNewFile,BufRead *.tsx set filetype=typescript.jsx
+autocmd BufNewFile,BufRead *.tsx,*.jsx,*.js set filetype=typescript.jsx
+
 
 " ## Docker ##
 autocmd BufNewFile,BufRead *.dockerfile set filetype=dockerfile
@@ -126,7 +127,7 @@ autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
 autocmd BufNewFile,BufRead *.thor set filetype=ruby
 
 " ## JS ##
-let g:jsx_ext_required = 0
+" let g:jsx_ext_required = 0
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_javascript_jsx_enabled_makers = ['eslint']
 autocmd! BufWritePost *.js Neomake
