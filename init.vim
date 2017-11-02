@@ -1,6 +1,7 @@
 " # Plugins #
 call plug#begin()
 
+Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 " Plug 'fcpg/vim-farout'
@@ -38,6 +39,7 @@ Plug 'stephpy/vim-yaml'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'quramy/tsuquyomi'
+Plug 'Shougo/echodoc.vim'
 Plug 'Shougo/vimproc'
 
 " ## LSP ##
@@ -110,11 +112,13 @@ nnoremap k gk
 " # Language-specific options #
 
 let g:ale_linters = {
+            \   'rust': [''],
             \   'typescript': ['tslint'],
             \}
 
 " ## Rust ##
 autocmd FileType rust nnoremap <Leader>asm :RustEmitAsm<CR>
+autocmd FileType rust setlocal omnifunc=LanguageClient#complete
 
 " ## Typescript ##
 autocmd FileType typescript nmap <buffer> <Leader>t :
