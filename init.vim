@@ -154,6 +154,9 @@ autocmd BufNewFile,BufRead *.rb ALEEnable
 " let g:jsx_ext_required = 0
 autocmd BufNewFile,BufRead *.js ALEEnable
 
+" ## HTML ##
+autocmd BufNewFile,BufRead *.html.hbs set filetype=html
+
 " ## LSP ##
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
