@@ -75,6 +75,12 @@ set backupcopy=yes " The default behaviour breaks filesystem watchers
 set cursorline
 set wildmenu
 
+" Disable netrw
+let g:loaded_netrw = 1
+let g:loaded_netrwFileHandlers = 1
+let g:loaded_netrwPlugin = 1
+let g:loaded_netrwSettings = 1
+
 " . applies to each line of visual selectioen
 vnoremap . :norm.<CR>
 
