@@ -115,6 +115,11 @@ nnoremap k gk
 :digraph /^ 8599 " ↗
 :digraph \> 8600 " ↘
 
+
+nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+
 " # Language-specific options #
 
 let g:ale_linters = {
