@@ -12,6 +12,7 @@ Plug 'justinmk/vim-dirvish'
 Plug 'kyuhi/vim-emoji-complete'
 Plug 'machakann/vim-swap'
 Plug 'mhinz/vim-signify'
+Plug 'mxw/vim-jsx'
 Plug 'nanotech/jellybeans.vim'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-characterize'
@@ -124,6 +125,7 @@ nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 
 let g:ale_linters = {
             \   'rust': [''],
+            \   'javascript': ['eslint'],
             \   'typescript': ['tslint'],
             \}
 
@@ -134,7 +136,8 @@ autocmd FileType rust setlocal omnifunc=LanguageClient#complete
 " ## Typescript ##
 autocmd FileType typescript nmap <buffer> <Leader>t :
             \ <C-u>echo tsuquyomi#hint()<CR>
-autocmd BufNewFile,BufRead *.tsx,*.jsx,*.js set filetype=typescript.jsx
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
+
 
 
 " ## Docker ##
@@ -153,6 +156,7 @@ autocmd BufNewFile,BufRead *.rb ALEEnable
 " ## JS ##
 " let g:jsx_ext_required = 0
 autocmd BufNewFile,BufRead *.js ALEEnable
+autocmd BufNewFile,BufRead *.js set filetype=javascript
 
 " ## HTML ##
 autocmd BufNewFile,BufRead *.html.hbs set filetype=html
