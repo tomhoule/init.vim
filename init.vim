@@ -9,7 +9,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-dirvish'
-Plug 'kyuhi/vim-emoji-complete'
 Plug 'machakann/vim-swap'
 Plug 'mhinz/vim-signify'
 Plug 'mxw/vim-jsx'
