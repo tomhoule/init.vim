@@ -11,7 +11,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-dirvish'
 Plug 'machakann/vim-swap'
 Plug 'mhinz/vim-signify'
-Plug 'mxw/vim-jsx'
 Plug 'nanotech/jellybeans.vim'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-characterize'
@@ -29,8 +28,8 @@ Plug 'cespare/vim-toml'
 Plug 'derekwyatt/vim-scala'
 Plug 'elixir-lang/vim-elixir'
 Plug 'JulesWang/css.vim'
-" Plug 'mxw/vim-jsx'
-" Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
 Plug 'raichoo/purescript-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'stephpy/vim-yaml'
@@ -136,8 +135,6 @@ autocmd FileType rust setlocal omnifunc=LanguageClient#complete
 autocmd FileType typescript nmap <buffer> <Leader>t :
             \ <C-u>echo tsuquyomi#hint()<CR>
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
-
-
 
 " ## Docker ##
 autocmd BufNewFile,BufRead *.dockerfile set filetype=dockerfile
