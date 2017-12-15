@@ -39,7 +39,6 @@ Plug 'stephpy/vim-yaml'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'quramy/tsuquyomi'
-Plug 'reasonml-editor/vim-reason-plus'
 Plug 'Shougo/echodoc.vim'
 Plug 'Shougo/vimproc'
 
@@ -163,9 +162,7 @@ autocmd BufNewFile,BufRead *.html.hbs set filetype=html
 
 " ## LSP ##
 let g:LanguageClient_serverCommands = {
-    \ 'reason': ['ocaml-language-server', '--stdio'],
     \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
-    \ 'ocaml': ['ocaml-language-server', '--stdio'],
     \ }
 
 " Automatically start language servers.
