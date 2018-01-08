@@ -97,7 +97,6 @@ nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>m :Marks<CR>
 nnoremap <Leader>re :Rename<SPACE>
-nnoremap <Leader>x :Delete<CR>
 nnoremap <Leader>git :Gstatus<CR>
 nnoremap <Leader>ar :set rightleft<CR>
 nnoremap <Leader>nar :set norightleft<CR>
