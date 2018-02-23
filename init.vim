@@ -1,7 +1,6 @@
 " # Plugins #
 call plug#begin()
 
-Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 " Plug 'fcpg/vim-farout'
@@ -20,7 +19,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'w0rp/ale'
 
 " ## Language-specific plugins ##
 Plug 'ap/vim-css-color'
@@ -37,13 +35,6 @@ Plug 'stephpy/vim-yaml'
 " ## Typescript ##
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
-Plug 'quramy/tsuquyomi'
-Plug 'Shougo/echodoc.vim'
-Plug 'Shougo/vimproc'
-
-" ## LSP ##
-Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/echodoc.vim'
 
 call plug#end()
 
@@ -113,26 +104,13 @@ nnoremap k gk
 :digraph /^ 8599 " ↗
 :digraph \> 8600 " ↘
 
-
-nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
-
 " # Language-specific options #
-
-let g:ale_linters = {
-            \   'rust': [''],
-            \   'javascript': ['eslint'],
-            \   'typescript': ['tslint'],
-            \}
 
 " ## Rust ##
 autocmd FileType rust nnoremap <Leader>asm :RustEmitAsm<CR>
 autocmd FileType rust setlocal omnifunc=LanguageClient#complete
 
 " ## Typescript ##
-autocmd FileType typescript nmap <buffer> <Leader>t :
-            \ <C-u>echo tsuquyomi#hint()<CR>
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
 
 " ## Docker ##
@@ -141,16 +119,16 @@ autocmd BufNewFile,BufRead *.dockerfile set filetype=dockerfile
 " ## Python ##
 autocmd FileType python setlocal formatprg=autopep8\ -
 autocmd BufNewFile,BufRead *.py set makeprg=flake8
-autocmd BufNewFile,BufRead *.py ALEEnable
 
 " ## Ruby ##
 autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
 autocmd BufNewFile,BufRead *.thor set filetype=ruby
-autocmd BufNewFile,BufRead *.rb ALEEnable
+
+" ## LaTeX ##
+autocmd BufNewFile,BufRead *.tex.tera set filetype=tex
 
 " ## JS ##
 " let g:jsx_ext_required = 0
-autocmd BufNewFile,BufRead *.js ALEEnable
 autocmd BufNewFile,BufRead *.js set filetype=javascript
 
 " ## HTML ##
