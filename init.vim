@@ -146,7 +146,7 @@ let g:lightline.active = {
             \            [ 'percent' ],
             \            [ 'fileformat', 'fileencoding', 'filetype' ] ] }
 let g:lightline.inactive = {
-            \ 'left': [ [ 'filename' ] ],
+            \ 'left': [ [ 'relativepath' ] ],
             \ 'right': [ [ 'lineinfo' ],
             \            [ 'percent' ] ] }
 let g:lightline.component_function = {
