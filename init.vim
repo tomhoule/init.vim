@@ -3,7 +3,6 @@ call plug#begin()
 
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
-" Plug 'fcpg/vim-farout'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -108,7 +107,6 @@ nnoremap k gk
 
 " ## Rust ##
 autocmd FileType rust nnoremap <Leader>asm :RustEmitAsm<CR>
-autocmd FileType rust setlocal omnifunc=LanguageClient#complete
 
 " ## Typescript ##
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
@@ -133,18 +131,6 @@ autocmd BufNewFile,BufRead *.js set filetype=javascript
 
 " ## HTML ##
 autocmd BufNewFile,BufRead *.html.hbs set filetype=html
-
-" ## LSP ##
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
-    \ }
-
-" Automatically start language servers.
-let g:LanguageClient_autoStart = 1
-
-nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 
 " Lightline
 let g:lightline = {}
