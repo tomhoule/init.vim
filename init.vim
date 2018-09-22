@@ -1,10 +1,6 @@
 " # Plugins #
 call plug#begin()
 
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'itchyny/lightline.vim'
@@ -14,7 +10,6 @@ Plug 'justinmk/vim-dirvish'
 Plug 'machakann/vim-swap'
 Plug 'mhinz/vim-signify'
 Plug 'nanotech/jellybeans.vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-commentary'
@@ -112,6 +107,7 @@ nnoremap k gk
 
 " ## Rust ##
 autocmd FileType rust nnoremap <Leader>asm :RustEmitAsm<CR>
+let g:rustfmt_fail_silently=0
 
 " ## Typescript ##
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
@@ -152,14 +148,3 @@ let g:lightline.inactive = {
 let g:lightline.component_function = {
             \ 'gitbranch': 'fugitive#head'
             \ }
-
-" LanguageClient
-let g:deoplete#enable_at_startup = 1
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
-    \ }
-
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-nnoremap <silent> <C-.> :call LanguageClient#textDocument_codeAction()<CR>
