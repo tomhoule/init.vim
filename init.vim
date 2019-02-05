@@ -1,6 +1,10 @@
 " # Plugins #
 call plug#begin()
 
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'itchyny/lightline.vim'
@@ -10,6 +14,11 @@ Plug 'justinmk/vim-dirvish'
 Plug 'machakann/vim-swap'
 Plug 'mhinz/vim-signify'
 Plug 'nanotech/jellybeans.vim'
+Plug 'ncm2/ncm2'
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
+Plug 'roxma/nvim-yarp'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-commentary'
@@ -24,6 +33,7 @@ Plug 'ap/vim-css-color'
 Plug 'cespare/vim-toml'
 Plug 'derekwyatt/vim-scala'
 Plug 'elixir-lang/vim-elixir'
+Plug 'jparise/vim-graphql'
 Plug 'JulesWang/css.vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
@@ -63,6 +73,8 @@ set secure
 set backupcopy=yes " The default behaviour breaks filesystem watchers
 set cursorline
 set wildmenu
+" Required for languageclient-neovim
+set hidden
 
 " Disable netrw
 let g:loaded_netrw = 1
@@ -103,7 +115,9 @@ nnoremap k gk
 :digraph /^ 8599 " ↗
 :digraph \> 8600 " ↘
 
-" # Language-specific options #
+" # Gitmojis #
+
+nmap <Leader>j "=system('gitmoji-selector')<C-M>P
 
 " ## Rust ##
 autocmd FileType rust nnoremap <Leader>asm :RustEmitAsm<CR>
@@ -148,3 +162,14 @@ let g:lightline.inactive = {
 let g:lightline.component_function = {
             \ 'gitbranch': 'fugitive#head'
             \ }
+
+" LSP "
+let g:LanguageClient_serverCommands = {
+        \ 'rust': ['rls'],
+        \ }
+
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+
+" Completion "
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
