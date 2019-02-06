@@ -166,6 +166,7 @@ let g:lightline.component_function = {
 " LSP "
 let g:LanguageClient_serverCommands = {
         \ 'rust': ['rls'],
+        \ 'ruby': ['solargraph', 'stdio'],
         \ }
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
