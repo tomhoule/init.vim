@@ -7,6 +7,8 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ }
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'dcharbon/vim-flatbuffers'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -16,6 +18,7 @@ Plug 'mhinz/vim-signify'
 Plug 'nanotech/jellybeans.vim'
 Plug 'ncm2/ncm2'
 Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-go'
 Plug 'ncm2/ncm2-path'
 Plug 'roxma/nvim-yarp'
 Plug 'terryma/vim-multiple-cursors'
@@ -42,8 +45,8 @@ Plug 'rust-lang/rust.vim'
 Plug 'stephpy/vim-yaml'
 
 " ## Typescript ##
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 call plug#end()
 
@@ -136,6 +139,8 @@ autocmd BufNewFile,BufRead *.py set makeprg=flake8
 " ## Ruby ##
 autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
 autocmd BufNewFile,BufRead *.thor set filetype=ruby
+autocmd FileType ruby set foldmethod=syntax
+autocmd FileType ruby set foldlevel=5
 
 " ## LaTeX ##
 autocmd BufNewFile,BufRead *.tex.tera set filetype=tex
@@ -169,7 +174,13 @@ let g:LanguageClient_serverCommands = {
         \ 'ruby': ['solargraph', 'stdio'],
         \ }
 
-nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+autocmd FileType rust,ruby nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+autocmd FileType rust,ruby nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+autocmd FileType rust,ruby nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+autocmd FileType rust,ruby nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+autocmd FileType rust,ruby nnoremap <silent> <F12> :call LanguageClient#textDocument_references()<CR>
+autocmd FileType rust,ruby nnoremap <silent> <C-t> :call LanguageClient#workspace_symbol()<CR>
+autocmd FileType rust,ruby nnoremap <silent> <C-.> :call LanguageClient#textDocument_codeAction()<CR>
 
 " Completion "
 autocmd BufEnter * call ncm2#enable_for_buffer()
