@@ -5,14 +5,14 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-Plug 'easymotion/vim-easymotion'
+Plug 'dcharbon/vim-flatbuffers'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'dcharbon/vim-flatbuffers'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-dirvish'
+Plug 'justinmk/vim-sneak'
 Plug 'machakann/vim-swap'
 Plug 'mhinz/vim-signify'
 Plug 'nanotech/jellybeans.vim'
@@ -21,7 +21,6 @@ Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-go'
 Plug 'ncm2/ncm2-path'
 Plug 'roxma/nvim-yarp'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-commentary'
@@ -85,27 +84,31 @@ let g:loaded_netrwFileHandlers = 1
 let g:loaded_netrwPlugin = 1
 let g:loaded_netrwSettings = 1
 
-" . applies to each line of visual selectioen
-vnoremap . :norm.<CR>
+" Sneak
+let g:sneak#label = 1
 
 let $FZF_DEFAULT_COMMAND='rg --files'
 
 " # Keybindings #
 let mapleader="»"
 
+nnoremap <Leader>ar :set rightleft<CR>
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>d :Dirvish %<CR>
+nnoremap <Leader>f :FZF<CR>
+nnoremap <Leader>git :Gstatus<CR>
+nnoremap <Leader>h :nohlsearch<CR>
+nmap <Leader>j "=system('gitmoji-selector')<C-M>P
+nnoremap <Leader>m :Marks<CR>
+nnoremap <Leader>nar :set norightleft<CR>
+nnoremap <Leader>p :Dirvish<CR>
+nnoremap <Leader>re :Rename<SPACE>
+nnoremap <Leader>rg :grep  .<LEFT><LEFT>
+nnoremap <Leader>sp :set paste<CR>
+nnoremap <Leader>snp :set nopaste<CR>
 " aww yiss! ↴
 nnoremap <Leader>w :w<CR>
-nnoremap <Leader>d :Dirvish %<CR>
-nnoremap <Leader>p :Dirvish<CR>
-nnoremap <Leader>h :nohlsearch<CR>
-nnoremap <Leader>f :FZF<CR>
-nnoremap <Leader>b :Buffers<CR>
-nnoremap <Leader>m :Marks<CR>
-nnoremap <Leader>re :Rename<SPACE>
-nnoremap <Leader>git :Gstatus<CR>
-nnoremap <Leader>ar :set rightleft<CR>
-nnoremap <Leader>nar :set norightleft<CR>
-nnoremap <Leader>rg :grep  .<LEFT><LEFT>
+
 noremap é :
 " CTRL-L normally redraws. <C-l> <C-l> still works
 noremap! <C-l> <ESC>
@@ -118,16 +121,16 @@ nnoremap k gk
 :digraph /^ 8599 " ↗
 :digraph \> 8600 " ↘
 
-" # Gitmojis #
-
-nmap <Leader>j "=system('gitmoji-selector')<C-M>P
-
 " ## Rust ##
 autocmd FileType rust nnoremap <Leader>asm :RustEmitAsm<CR>
+autocmd FileType rust nnoremap <Leader>F :silent w<CR>:silent !cargo fmt<CR>:silent e<CR>
 let g:rustfmt_fail_silently=0
 
 " ## Typescript ##
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
+autocmd BufNewFile,BufRead *.tsx,*.jsx set shiftwidth=2
+autocmd FileType typescript,typescript.jsx nnoremap <silent> gd :TSDef<CR>
+autocmd FileType typescript,typescript.jsx nnoremap <silent> <F2> :TSRename<CR>
 
 " ## Docker ##
 autocmd BufNewFile,BufRead *.dockerfile set filetype=dockerfile
@@ -139,14 +142,11 @@ autocmd BufNewFile,BufRead *.py set makeprg=flake8
 " ## Ruby ##
 autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
 autocmd BufNewFile,BufRead *.thor set filetype=ruby
-autocmd FileType ruby set foldmethod=syntax
-autocmd FileType ruby set foldlevel=5
 
 " ## LaTeX ##
 autocmd BufNewFile,BufRead *.tex.tera set filetype=tex
 
 " ## JS ##
-" let g:jsx_ext_required = 0
 autocmd BufNewFile,BufRead *.js set filetype=javascript
 
 " ## HTML ##
