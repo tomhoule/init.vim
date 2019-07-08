@@ -5,9 +5,7 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-Plug 'dcharbon/vim-flatbuffers'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -18,7 +16,6 @@ Plug 'mhinz/vim-signify'
 Plug 'nanotech/jellybeans.vim'
 Plug 'ncm2/ncm2'
 Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-go'
 Plug 'ncm2/ncm2-path'
 Plug 'roxma/nvim-yarp'
 Plug 'tpope/vim-abolish'
@@ -28,24 +25,19 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
 
 " ## Language-specific plugins ##
 Plug 'ap/vim-css-color'
 Plug 'cespare/vim-toml'
+Plug 'dcharbon/vim-flatbuffers'
 Plug 'derekwyatt/vim-scala'
 Plug 'elixir-lang/vim-elixir'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'jparise/vim-graphql'
 Plug 'JulesWang/css.vim'
-Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
 Plug 'raichoo/purescript-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'stephpy/vim-yaml'
-
-" ## Typescript ##
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 call plug#end()
 
@@ -53,27 +45,28 @@ set termguicolors
 colorscheme jellybeans
 
 " # Configuration #
-set number
 filetype plugin indent on
-set ruler
-set showcmd
-set listchars=tab:▸\ ,trail:¤,nbsp:·,extends:>,precedes:<
-set list
-set textwidth=0
-set formatoptions=qjmn
-set linebreak
-set breakindent
-set tabstop=8
-set shiftwidth=4
-set expandtab
-set ignorecase smartcase
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-set grepprg=rg\ --vimgrep
-set scroll=5
-set exrc
-set secure
+set autowrite
 set backupcopy=yes " The default behaviour breaks filesystem watchers
+set breakindent
 set cursorline
+set expandtab
+set exrc
+set formatoptions=qjmn
+set grepprg=rg\ --vimgrep
+set ignorecase smartcase
+set linebreak
+set list
+set listchars=tab:▸\ ,trail:¤,nbsp:·,extends:>,precedes:<
+set number
+set ruler
+set scroll=5
+set secure
+set shiftwidth=4
+set showcmd
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+set tabstop=8
+set textwidth=0
 set wildmenu
 " Required for languageclient-neovim
 set hidden
@@ -123,14 +116,12 @@ nnoremap k gk
 
 " ## Rust ##
 autocmd FileType rust nnoremap <Leader>asm :RustEmitAsm<CR>
-autocmd FileType rust nnoremap <Leader>F :silent w<CR>:silent !cargo fmt<CR>:silent e<CR>
 let g:rustfmt_fail_silently=0
+let g:rustfmt_autosave=1
 
 " ## Typescript ##
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
 autocmd BufNewFile,BufRead *.tsx,*.jsx set shiftwidth=2
-autocmd FileType typescript,typescript.jsx nnoremap <silent> gd :TSDef<CR>
-autocmd FileType typescript,typescript.jsx nnoremap <silent> <F2> :TSRename<CR>
 
 " ## Docker ##
 autocmd BufNewFile,BufRead *.dockerfile set filetype=dockerfile
